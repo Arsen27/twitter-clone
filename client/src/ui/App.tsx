@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { light } from './styles/themes';
 import BaseStyles from './styles/BaseStyles';
 import NormalizeStyles from './styles/NormalizeStyles';
+import ViewsHome from './views/Home';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(light);
@@ -14,7 +15,11 @@ const App = () => {
       <NormalizeStyles />
       <BaseStyles />
 
-      Hello world!
+      <Navigate to='/home' replace={true} />
+
+      <Routes>
+        <Route path='/home' element={<ViewsHome />} />
+      </Routes>
     </ThemeProvider>
   );
 };
