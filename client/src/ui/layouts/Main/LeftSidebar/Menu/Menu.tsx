@@ -6,7 +6,7 @@ import Item from './Item';
 type TMenuProps = {
 }
 
-const BaseMenu = ({}: TMenuProps) => {
+const LayoutsMainLeftSidebarMenu = ({}: TMenuProps) => {
   const $items = itemsList.map((item: TMenuItem) => <Item { ...item } />);
 
   return (
@@ -16,5 +16,4 @@ const BaseMenu = ({}: TMenuProps) => {
   );
 };
 
-export default BaseMenu;
-
+export default LayoutsMainLeftSidebarMenu;

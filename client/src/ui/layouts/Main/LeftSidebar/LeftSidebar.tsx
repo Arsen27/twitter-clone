@@ -1,6 +1,6 @@
 import BaseButton from '../../../components/Base/Button/Button';
 import BaseLogo from '../../../components/Base/Logo/Logo';
-import BaseMenu from '../../../components/Base/Menu/Menu';
+import BaseMenu from './Menu/Menu';
 import { Container, Top, Content, TweetButton, Bottom } from './LeftSidebarStyles';
 import UserProfile from './UserProfile';
 

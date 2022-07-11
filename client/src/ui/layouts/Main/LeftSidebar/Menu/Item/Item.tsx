@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
-import BaseIcon, { IconTypes } from '../../Icon';
+import BaseIcon, { IconTypes } from '../../../../../components/Base/Icon';
 import { TMenuItem } from '../types';
 import { Wrapper ,Container, Text } from './ItemStyles';
 
 type TItemProps = {
 } & TMenuItem;
 
-const BaseMenuItem = ({ text, icon, path }: TItemProps) => {
+const LayoutsMainLeftSidebarMenuItem = ({ text, icon, path }: TItemProps) => {
   return (
     <Wrapper
       to={`/${path}`}
@@ -28,5 +28,4 @@ const BaseMenuItem = ({ text, icon, path }: TItemProps) => {
   );
 };
 
-export default BaseMenuItem;
-
+export default LayoutsMainLeftSidebarMenuItem;
