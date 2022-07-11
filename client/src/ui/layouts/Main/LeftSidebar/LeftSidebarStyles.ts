@@ -22,9 +22,9 @@ export const TweetButton = styled.button`
   height: 52px;
   font-size: 17px;
   margin: 8px 12px 4px 0;
+  width: 90%;
 `;
 
 export const Bottom = styled.div`
   margin: 12px 0;
 `;
-
