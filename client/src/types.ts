@@ -1,1 +1,1 @@
-export type TChildren = JSX.Element | JSX.Element[];
+export type TChildren = JSX.Element | JSX.Element[] | string;

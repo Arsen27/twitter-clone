@@ -1,13 +1,13 @@
-import { Container } from './HomeStyles';
+import LayoutsMain from '../../layouts/Main/Main';
 
 type THomeProps = {
 }
 
 const ViewsHome = ({}: THomeProps) => {
   return (
-    <Container>
-      Home Page
-    </Container>
+    <LayoutsMain>
+      Content
+    </LayoutsMain>
   );
 };
 

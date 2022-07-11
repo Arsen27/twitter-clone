@@ -1,15 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  html, body, #root {
-    height: 100%;
-    min-height: 100%;
-  }
-
   body {
-  }
-
-  input, textarea, button {
-    outline: none;
+    font-family: 'Poppins', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.text.primary};
   }
 `;

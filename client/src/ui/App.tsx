@@ -2,24 +2,26 @@ import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { light } from './styles/themes';
+import { dark } from './styles/themes';
 import BaseStyles from './styles/BaseStyles';
 import NormalizeStyles from './styles/NormalizeStyles';
 import ViewsHome from './views/Home';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(light);
+  const [currentTheme, setCurrentTheme] = useState(dark);
 
   return (
     <ThemeProvider theme={currentTheme}>
       <NormalizeStyles />
       <BaseStyles />
 
-      <Navigate to='/home' replace={true} />
+      {/* <Navigate to='/home' replace={true} /> */}
 
+      <ViewsHome></ViewsHome>
+{/* 
       <Routes>
         <Route path='/home' element={<ViewsHome />} />
-      </Routes>
+      </Routes> */}
     </ThemeProvider>
   );
 };

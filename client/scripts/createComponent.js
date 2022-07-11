@@ -70,7 +70,6 @@ const ${componentFullName} = ({}: ${propsTypeName}) => {
 };
 
 export default ${componentFullName};
-
 `;
 
   fs.writeFile(`${fullPath}/${componentNameEnding}.tsx`, fileContent, () => null);
