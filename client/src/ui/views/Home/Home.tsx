@@ -1,3 +1,4 @@
+import BaseDivider from '../../components/Base/Divider/Divider';
 import LayoutsMain from '../../layouts/Main/Main';
 import { Header } from './HomeStyles';
 import TweetCreator from './TweetCreator';

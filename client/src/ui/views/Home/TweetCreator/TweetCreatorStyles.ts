@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  padding: 0 16px;
+  padding: 0 16px 12px 16px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border.primary};
 `;
 
 export const Left = styled.div`
@@ -29,10 +30,6 @@ export const CanReplyButton = styled.button`
   width: fit-content;
 
   padding: 4px 10px;
-`;
-
-export const Divider = styled.div`
-  margin: 12px 0;
 `;
 
 export const Bottom = styled.div`

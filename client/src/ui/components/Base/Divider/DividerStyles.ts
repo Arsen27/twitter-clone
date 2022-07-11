@@ -17,9 +17,10 @@ const getStylesByType = (type: DividerTypes) => {
   return css`${map[type]}`;
 };
 
-
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.border.primary};
+  margin: ${({ margin }) => margin};
+  display: ${({ show }) => show ? 'block' : 'none'};
 
   ${({ type }) => getStylesByType(type)}
 `;

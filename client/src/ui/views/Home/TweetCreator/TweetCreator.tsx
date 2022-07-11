@@ -7,7 +7,7 @@ import BaseButton, { ButtonVariants } from '../../../components/Base/Button';
 import BaseDivider from '../../../components/Base/Divider/Divider';
 import BaseIcon from '../../../components/Base/Icon';
 import { TTheme } from '../../../styles/themes/types';
-import { Container, Left, Right, Textarea, CanReplyButton, Divider, Bottom, Additions, Addition, TweetButton } from './TweetCreatorStyles';
+import { Container, Left, Right, Textarea, CanReplyButton, Bottom, Additions, Addition, TweetButton } from './TweetCreatorStyles';
 
 type TTweetCreatorProps = {
   theme: TTheme;
@@ -58,9 +58,10 @@ const ViewsHomeTweetCreator = ({ theme }: TTweetCreatorProps) => {
           <span>Everyone can reply</span>
         </CanReplyButton>
 
-        <Divider>
-          <BaseDivider />
-        </Divider>
+        <BaseDivider
+          show={isFocused}
+          margin='12px 0'
+        />
 
         <Bottom>
           <Additions>
