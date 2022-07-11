@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { FONT_FAMILY } from './const';
+
 export default createGlobalStyle`
   body {
-    font-family: 'Poppins', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: ${FONT_FAMILY};
     background: ${({ theme }) => theme.colors.bg.primary};
     color: ${({ theme }) => theme.colors.text.primary};
   }

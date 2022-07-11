@@ -2,7 +2,7 @@ import BaseIcon, { IconTypes } from '../Icon';
 import { Container, Icon } from './AvatarStyles';
 
 type TAvatarProps = {
-  size?: number
+  size?: number;
 }
 
 const BaseAvatar = ({ size = 40 }: TAvatarProps) => {

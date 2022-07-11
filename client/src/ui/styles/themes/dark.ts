@@ -13,12 +13,13 @@ const darkTheme: TTheme = {
       secondary: '#71767a',
       tertiary: '#fff',
       contrast: '#0f1419',
+      placeholder: '#8a98a5',
     },
     border: {
       primary: '#2f3336',
-      secondary: 'rgb(83, 100, 113)',
+      secondary: 'rgba(83, 100, 113, 1)',
     },
-    accent: '#1d9bf0',
+    accent: 'rgba(29, 155, 240, 1)',
   },
 };
 

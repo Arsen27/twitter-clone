@@ -9,7 +9,7 @@ export type TColorVariants = {
 export type TTheme = {
   colors: {
     bg: Partial<TColorVariants>;
-    text: Partial<TColorVariants>;
+    text: Partial<TColorVariants> & Partial<{ placeholder: string }>;
     border: Partial<TColorVariants>;
     accent: string;
   };

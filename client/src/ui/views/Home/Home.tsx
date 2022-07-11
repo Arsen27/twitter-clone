@@ -1,4 +1,6 @@
 import LayoutsMain from '../../layouts/Main/Main';
+import { Header } from './HomeStyles';
+import TweetCreator from './TweetCreator';
 
 type THomeProps = {
 }
@@ -6,7 +8,9 @@ type THomeProps = {
 const ViewsHome = ({}: THomeProps) => {
   return (
     <LayoutsMain>
-      Content
+      <Header>Home</Header>
+
+      <TweetCreator />
     </LayoutsMain>
   );
 };

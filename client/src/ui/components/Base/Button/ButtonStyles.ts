@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { TTheme } from '../../../styles/themes/types';
+import { changeRgbaOpacity } from '../../../styles/utils';
 import { ButtonVariants } from './Button';
 
 const getStylesByVariant = (variant: ButtonVariants, theme: TTheme) => {
@@ -18,6 +19,12 @@ const getStylesByVariant = (variant: ButtonVariants, theme: TTheme) => {
       border: 1px solid ${theme.colors.border.secondary};
       color: ${theme.colors.text.primary};
     `,
+    [ButtonVariants.Free]: `
+      color: ${theme.colors.accent};
+      :hover {
+        background: ${changeRgbaOpacity(theme.colors.accent, 0.1)};
+      }
+    `,
   };
 
   return css`${map[variant]}`;
@@ -33,7 +40,7 @@ export const Container = styled.button`
   background: none;
   border-radius: 9999px;
   
-  font-weight: 700;
+  font-weight: 600;
   
   padding: 0 calc(height / 2);
 

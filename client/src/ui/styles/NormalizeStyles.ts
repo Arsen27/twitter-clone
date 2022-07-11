@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { FONT_FAMILY } from './const';
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -18,6 +20,12 @@ export default createGlobalStyle`
     background: transparent;
     border: 0;
     outline: none;
+
+    font-family: ${FONT_FAMILY};
+
+    ::placeholder {
+      color: ${({ theme }) => theme.colors.text.placeholder};
+    }
   }
 
   a {

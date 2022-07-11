@@ -5,6 +5,7 @@ export enum ButtonVariants {
   Primary = 'primary',
   Secondary = 'secondary',
   Outlined = 'outlined',
+  Free = 'free',
 }
 
 type TButtonProps = {
