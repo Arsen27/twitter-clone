@@ -1,7 +1,7 @@
 import { TChildren } from '../../../types';
 import { Container, Left, Content, Right } from './MainStyles';
-import RightSidebar from './RightSidebar';
-import LeftSidebar from './LeftSidebar';
+import RightSidebar from '../../components/layouts/Main/RightSidebar';
+import LeftSidebar from '../../components/layouts/Main/LeftSidebar';
 
 type TMainProps = {
   children: TChildren;

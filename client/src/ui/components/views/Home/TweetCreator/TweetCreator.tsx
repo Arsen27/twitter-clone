@@ -2,11 +2,11 @@ import { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import { withTheme } from 'styled-components';
 
-import BaseAvatar from '../../../components/Base/Avatar/Avatar';
-import BaseButton, { ButtonVariants } from '../../../components/Base/Button';
-import BaseDivider from '../../../components/Base/Divider/Divider';
-import BaseIcon from '../../../components/Base/Icon';
-import { TTheme } from '../../../styles/themes/types';
+import BaseAvatar from '../../../Base/Avatar/Avatar';
+import BaseButton, { ButtonVariants } from '../../../Base/Button';
+import BaseDivider from '../../../Base/Divider/Divider';
+import BaseIcon from '../../../Base/Icon';
+import { TTheme } from '../../../../styles/themes/types';
 import { Container, Left, Right, Textarea, CanReplyButton, Bottom, Additions, Addition, TweetButton } from './TweetCreatorStyles';
 
 type TTweetCreatorProps = {
@@ -60,19 +60,20 @@ const ViewsHomeTweetCreator = ({ theme }: TTweetCreatorProps) => {
 
         <BaseDivider
           show={isFocused}
-          margin='12px 0'
+          spacing={12}
         />
 
         <Bottom>
           <Additions>
-            { additions.map((addition: TAdition) => (
+            { additions.map((addition: TAdition, i: number) => (
               <Addition
+                key={i}
                 as={BaseButton}
                 variant={ButtonVariants.Free}
               >
                 <BaseIcon
                   name={addition.icon}
-                  size={16}
+                  size={17}
                 />
               </Addition>
             )) }

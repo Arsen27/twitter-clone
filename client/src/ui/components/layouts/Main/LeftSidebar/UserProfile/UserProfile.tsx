@@ -1,5 +1,5 @@
-import BaseAvatar from '../../../../components/Base/Avatar/Avatar';
-import BaseIcon from '../../../../components/Base/Icon/Icon';
+import BaseAvatar from '../../../../Base/Avatar/Avatar';
+import BaseIcon from '../../../../Base/Icon/Icon';
 import { Container, Details, Name, UserName, Options } from './UserProfileStyles';
 
 type TUserProfileProps = {

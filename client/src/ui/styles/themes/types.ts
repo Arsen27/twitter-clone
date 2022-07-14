@@ -12,5 +12,7 @@ export type TTheme = {
     text: Partial<TColorVariants> & Partial<{ placeholder: string }>;
     border: Partial<TColorVariants>;
     accent: string;
+    green: string;
+    pink: string;
   };
 };

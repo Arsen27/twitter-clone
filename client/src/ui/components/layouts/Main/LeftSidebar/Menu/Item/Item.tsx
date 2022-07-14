@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import BaseIcon, { IconTypes } from '../../../../../components/Base/Icon';
+import BaseIcon, { IconTypes } from '../../../../../Base/Icon';
 import { TMenuItem } from '../types';
 import { Wrapper ,Container, Text } from './ItemStyles';
 

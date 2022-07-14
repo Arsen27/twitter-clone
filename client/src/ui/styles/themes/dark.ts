@@ -20,6 +20,8 @@ const darkTheme: TTheme = {
       secondary: 'rgba(83, 100, 113, 1)',
     },
     accent: 'rgba(29, 155, 240, 1)',
+    green: 'rgba(0, 186, 124, 1)',
+    pink: 'rgba(249, 24, 128, 1)',
   },
 };
 

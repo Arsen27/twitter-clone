@@ -1,4 +1,4 @@
-import { IconSources } from '../../../../components/Base/Icon';
+import { IconSources } from '../../../../Base/Icon';
 import { TMenuItem } from './types';
 
 const items: TMenuItem[] = [

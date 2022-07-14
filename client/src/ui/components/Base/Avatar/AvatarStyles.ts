@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Icon = styled.div`
   position: relative;
-  bottom: 0;
+  bottom: -20%;
   left: 50%;
   transform: translateX(-50%);
 `;

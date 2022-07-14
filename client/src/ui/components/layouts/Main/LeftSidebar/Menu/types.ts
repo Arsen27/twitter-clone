@@ -1,4 +1,4 @@
-import { IconSources } from '../../../../components/Base/Icon';
+import { IconSources } from '../../../../Base/Icon';
 
 export type TMenuItem = {
   text: string;

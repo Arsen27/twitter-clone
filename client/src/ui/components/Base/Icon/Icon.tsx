@@ -1,13 +1,18 @@
+import { withTheme } from 'styled-components';
+
 import { IconSources, IconTypes } from './types';
 import { Container } from './IconStyles';
 import customIconsMap from './Custom';
+import { TTheme } from '../../../styles/themes/types';
+import { getColor } from '../../../styles/utils';
+import { TWithThemeProp } from '../../../styles/types';
 
-type TIconProps = {
+export type TIconProps = {
   name: string;
-  color?: string;
   size?: number;
   source?: IconSources;
   type?: IconTypes;
+  color?: (theme) => string | string;
 }
 
 type TGetIconBySourceProps = {
@@ -27,8 +32,13 @@ const BaseIcon = ({
   color,
   source = IconSources.Bootstrap,
   type = IconTypes.Outlined,
-}: TIconProps) => {
-  const style = { fontSize: size, color };
+  theme,
+}: TIconProps & TWithThemeProp) => {
+  const style = {
+    display: 'flex',
+    fontSize: size,
+    color: color && getColor(color, theme),
+  };
 
   return (
     <Container>
@@ -49,4 +59,4 @@ function getCustomIcon({ name, style, type }: TGetIconBySourceProps) {
   return <Icon style={style} type={type} />;
 }
 
-export default BaseIcon;
+export default withTheme(BaseIcon);
