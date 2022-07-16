@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100%;
+  height: 100vh;
+
+  position: fixed;
 `;
 
 export const Top = styled.div`

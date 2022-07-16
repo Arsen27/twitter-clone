@@ -7,6 +7,7 @@ import BaseStyles from './styles/BaseStyles';
 import NormalizeStyles from './styles/NormalizeStyles';
 import ViewsHome from './views/Home';
 import ViewsTweet from './views/Tweet';
+import ViewsAuthLogin from './views/auth/Login';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(dark);
@@ -19,7 +20,10 @@ const App = () => {
       {/* <Navigate to='/home' replace={true} /> */}
 
       {/* <ViewsHome></ViewsHome> */}
-      <ViewsTweet></ViewsTweet>
+      {/* <ViewsTweet></ViewsTweet> */}
+
+      <ViewsAuthLogin></ViewsAuthLogin>
+
 {/* 
       <Routes>
         <Route path='/home' element={<ViewsHome />} />
