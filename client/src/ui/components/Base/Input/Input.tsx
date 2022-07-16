@@ -4,13 +4,13 @@ import useClickOutside from '../../../hooks/useClickOutside';
 import { Container, Label, Input } from './InputStyles';
 
 type TInputProps = {
+  value: string;
   label: string;
-  onChange?: (newValue: string) => void;
+  onChange: (newValue: string) => void;
 }
 
-const BaseInput = ({ label }: TInputProps) => {
+const BaseInput = ({ label, value, onChange }: TInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
-  const [value, setValue] = useState('');
 
   const $containerRef = useClickOutside(() => value || blur());
   const $inputRef = useRef<HTMLInputElement>(null);
@@ -39,7 +39,7 @@ const BaseInput = ({ label }: TInputProps) => {
         ref={$inputRef}
         isFocused={isFocused}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
       />
     </Container>
   );
