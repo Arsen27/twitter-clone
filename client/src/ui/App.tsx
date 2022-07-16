@@ -8,6 +8,7 @@ import NormalizeStyles from './styles/NormalizeStyles';
 import ViewsHome from './views/Home';
 import ViewsTweet from './views/Tweet';
 import ViewsAuthLogin from './views/auth/Login';
+import ViewsAuthSignUp from './views/auth/SignUp';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(dark);
@@ -22,7 +23,8 @@ const App = () => {
       {/* <ViewsHome></ViewsHome> */}
       {/* <ViewsTweet></ViewsTweet> */}
 
-      <ViewsAuthLogin></ViewsAuthLogin>
+      {/* <ViewsAuthLogin></ViewsAuthLogin> */}
+      <ViewsAuthSignUp></ViewsAuthSignUp>
 
 {/* 
       <Routes>

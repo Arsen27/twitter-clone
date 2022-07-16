@@ -35,7 +35,7 @@ const ViewsAuthLogin = ({}: TLoginProps) => {
           <SubmitButton
             as={BaseButton}
           >
-            Submit
+            Login
           </SubmitButton>
 
           <SignUpLink
