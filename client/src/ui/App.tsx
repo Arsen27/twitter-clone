@@ -6,6 +6,7 @@ import { dark } from './styles/themes';
 import BaseStyles from './styles/BaseStyles';
 import NormalizeStyles from './styles/NormalizeStyles';
 import ViewsHome from './views/Home';
+import ViewsTweet from './views/Tweet';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(dark);
@@ -17,7 +18,8 @@ const App = () => {
 
       {/* <Navigate to='/home' replace={true} /> */}
 
-      <ViewsHome></ViewsHome>
+      {/* <ViewsHome></ViewsHome> */}
+      <ViewsTweet></ViewsTweet>
 {/* 
       <Routes>
         <Route path='/home' element={<ViewsHome />} />

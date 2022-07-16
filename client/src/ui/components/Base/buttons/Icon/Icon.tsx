@@ -5,7 +5,7 @@ import { TWithThemeProp } from '../../../../styles/types';
 import { getColor } from '../../../../styles/utils';
 import BaseButton, { ButtonVariants } from '../../Button';
 import BaseIcon, { TIconProps } from '../../Icon';
-import { Container, IconWrapper, Number } from './IconButtonStyles';
+import { Container, IconWrapper, Number } from './IconStyles';
 
 type TIconButtonProps = TIconProps & {
   icon: TIconProps & { colorHover?: (theme: TTheme) => string | string; };
@@ -13,8 +13,12 @@ type TIconButtonProps = TIconProps & {
   number?: number;
 };
 
-const BaseIconButton = ({ size = 36, number = -1, icon, theme }: TIconButtonProps & TWithThemeProp) => {
-  const { colorHover, color, ...iconProps } = icon;
+const BaseButtonsIcon = ({ size = 36, number = -1, icon, theme, ...other }: TIconButtonProps & TWithThemeProp) => {
+  const {
+    colorHover = (theme: TTheme) => theme.colors.accent,
+    color,
+    ...iconProps
+  } = icon;
 
   const getDefaultColor = () => color && getColor(color, theme);
   const getColorHover = () => colorHover && getColor(colorHover, theme);
@@ -25,6 +29,7 @@ const BaseIconButton = ({ size = 36, number = -1, icon, theme }: TIconButtonProp
       variant={ButtonVariants.Free}
       color={getDefaultColor()}
       colorHover={getColorHover()}
+      { ...other }
     >
       <IconWrapper
         size={size}
@@ -33,9 +38,9 @@ const BaseIconButton = ({ size = 36, number = -1, icon, theme }: TIconButtonProp
         <BaseIcon { ...iconProps } />
       </IconWrapper>
       
-      <Number>{ number >= 0 && number }</Number>
+      { number >= 0 && <Number>{ number }</Number> }
     </Container>
   );
 };
 
-export default withTheme(BaseIconButton);
+export default withTheme(BaseButtonsIcon);

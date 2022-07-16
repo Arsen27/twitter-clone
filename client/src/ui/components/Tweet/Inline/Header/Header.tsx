@@ -1,7 +1,7 @@
-import BaseDivider, { DividerTypes, DividerOrientations } from '../../../Divider';
-import BaseButton, { ButtonVariants } from '../../../Button';
-import BaseIcon from '../../../Icon';
-import { Container, Left, Right, AuthorName, AuthorUsername, OptionsButton, Time } from './HeaderStyles';
+import BaseDivider, { DividerTypes, DividerOrientations } from '../../../Base/Divider';
+import BaseIconButton from '../../../Base/buttons/Icon';
+import { Container, Left, Right, AuthorName, AuthorUsername, Time } from './HeaderStyles';
+import { TTheme } from '../../../../styles/themes/types';
 
 type THeaderProps = {
 }
@@ -22,14 +22,13 @@ const BaseTweetInlineHeader = ({}: THeaderProps) => {
       </Left>
         
       <Right>
-        <OptionsButton
-          variant={ButtonVariants.Free}
-          as={BaseButton}
-        >
-          <BaseIcon
-            name='three-dots'
-          />
-        </OptionsButton>
+        <BaseIconButton
+          icon={{
+            name: 'three-dots',
+            color: (theme: TTheme) => theme.colors.text.secondary,
+            size: 18,
+          }}
+        />
       </Right>
     </Container>
   );

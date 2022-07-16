@@ -23,6 +23,8 @@ export default createGlobalStyle`
 
     font-family: ${FONT_FAMILY};
 
+    resize: none;
+
     ::placeholder {
       color: ${({ theme }) => theme.colors.text.placeholder};
     }

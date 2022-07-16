@@ -1,5 +1,5 @@
-import { TTheme } from '../../../../../styles/themes/types';
-import BaseIconButton from '../../../buttons/IconButton';
+import { TTheme } from '../../../../styles/themes/types';
+import BaseButtonsIcon from '../../../Base/buttons/Icon';
 import { Container } from './FooterStyles';
 
 type TFooterProps = {
@@ -10,7 +10,7 @@ const BaseTweetInlineFooter = ({}: TFooterProps) => {
 
   return (
     <Container>
-      <BaseIconButton
+      <BaseButtonsIcon
         number={200}
         icon={{
           name: 'chat',
@@ -20,7 +20,7 @@ const BaseTweetInlineFooter = ({}: TFooterProps) => {
         }}
       />
 
-      <BaseIconButton
+      <BaseButtonsIcon
         number={57}
         icon={{
           name: 'arrow-repeat',
@@ -30,7 +30,7 @@ const BaseTweetInlineFooter = ({}: TFooterProps) => {
         }}
       />
 
-      <BaseIconButton
+      <BaseButtonsIcon
         number={57}
         icon={{
           name: 'heart',
@@ -40,7 +40,7 @@ const BaseTweetInlineFooter = ({}: TFooterProps) => {
         }}
       />
 
-      <BaseIconButton
+      <BaseButtonsIcon
         icon={{
           name: 'share',
           size: 16,

@@ -1,13 +1,13 @@
 import Header from './Header';
 import Footer from './Footer';
-import BaseAvatar from '../../Avatar';
+import BaseAvatar from '../../Base/Avatar';
 import { Container, Left, Right, Content, Text } from './InlineStyles';
-import PhotoBox from '../PhotoBox';
+import PhotoBox from '../../Base/Tweet/PhotoBox';
 
 type TTweetProps = {
 }
 
-const BaseTweetInline = ({}: TTweetProps) => (
+const TweetInline = ({}: TTweetProps) => (
   <Container>
     <Left>
       <BaseAvatar size={48} />
@@ -27,4 +27,4 @@ const BaseTweetInline = ({}: TTweetProps) => (
   </Container>
 );
 
-export default BaseTweetInline;
+export default TweetInline;

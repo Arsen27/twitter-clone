@@ -3,7 +3,6 @@ import { withTheme } from 'styled-components';
 import { IconSources, IconTypes } from './types';
 import { Container } from './IconStyles';
 import customIconsMap from './Custom';
-import { TTheme } from '../../../styles/themes/types';
 import { getColor } from '../../../styles/utils';
 import { TWithThemeProp } from '../../../styles/types';
 

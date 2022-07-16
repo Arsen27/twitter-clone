@@ -18,7 +18,6 @@ export const Textarea = styled.textarea`
   width: 100%;
   font-size: 19px;
   padding: 12px 12px 8px 12px;
-  resize: none;
 `;
 
 export const CanReplyButton = styled.button`
@@ -36,6 +35,8 @@ export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  padding-left: 12px;
 `;
 
 export const Additions = styled.div`
